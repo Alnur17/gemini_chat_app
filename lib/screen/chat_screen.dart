@@ -25,6 +25,11 @@ class _ChatScreenState extends State<ChatScreen> {
     super.initState();
     model = GenerativeModel(model: 'gemini-pro', apiKey: apiKey);
     _scrollController = ScrollController();
+    _addMessage(
+      isUser: false,
+      message: "Welcome! How can I assist you today?",
+    );
+
   }
 
   @override
@@ -82,10 +87,10 @@ class _ChatScreenState extends State<ChatScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: backgroundColor,
-        body: Column(
+    return Scaffold(
+      backgroundColor: backgroundColor,
+      body: SafeArea(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Expanded(

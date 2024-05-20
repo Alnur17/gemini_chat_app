@@ -51,6 +51,8 @@ class Messages extends StatelessWidget {
       ),
     );
   }
+
+
   Future<void> _launchURL(String url) async {
     final Uri uri = Uri.parse(url);
     print('Launching URL: $uri');
